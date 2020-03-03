@@ -1,0 +1,26 @@
+***INSTALAR WEBPACK***
+
+1* crear la carpeta
+2* npm init -y
+3* npm install --save-dev webpack webpack-cli
+4* crear archivo webpack.config.js
+5* en esete archivo pegar plantilla:
+--------------------------------------------------
+var path = require('path');
+
+module.exports = {
+  entry: './foo.js',  //<---cambiar por ruta q corresp.
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'foo.bundle.js' //<---cambiar por	ruta q corresp.
+  }
+};
+-------------------------------------------------
+6* En Package.json :Dentro de "script"..crear la siguiente linea:
+--------------------
+    "build":"webpack --mode=production",
+
+--------------------
+7* npm run build
+
+listo!
